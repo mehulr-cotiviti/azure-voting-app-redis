@@ -8,6 +8,7 @@ pipeline {
         }
         stage("Docker build") {
             steps {
+                sh (script: 'echo $PATH')
                 sh(script: "docker image ls ")
 
                 sh(script: """
